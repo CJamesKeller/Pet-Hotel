@@ -9,10 +9,19 @@ function addEventListeners() {
 }
 
   //Event listeners will go here.
-
-  $('h1').on('click', function(){
-    $('h1').text('Cat Hotel');
+  //Start of Logan's add
+  $('#firstNameInput').on('click', function(){
+      console.log('firstNameInput');
   });
+
+  $('#lastNameInput').on('click', function(){
+    console.log('lastNameInput');
+  });
+
+  $('#addOwnerButton').on('click', function(){
+    console.log('addOwnerButton');
+  });
+
   $("#ownerForm").on("click","button",function(){
     console.log("ownerForm on click button");
   });//end ownerForm On Click button
