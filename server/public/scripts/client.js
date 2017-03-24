@@ -2,7 +2,6 @@ $(document).ready(function(){
   console.log('js sourced');
   getData();
   addEventListeners();
-  appendDom();
 });
 
 function addEventListeners() {
@@ -39,15 +38,15 @@ function addPetPostRequest (event) {
 }
 
 //This will be called using a response from server!!
-function appendDom()
+function displayData(dataArray)
 {
-  for(var i = 0; i < res.length; i++)
+  for(var i = 0; i < dataArray.length; i++)
   {
-    var petInfo = res[i];
+    var petInfo = dataArray[i];
     $("#petBody").append("<tr>");
     var $el = $("#petBody").children().last();
-    $el.append("<td>" + petInfo.owner + "</td>");
-    $el.append("<td>" + petInfo.name + "</td>");
+    $el.append("<td>" + petInfo.first_name + "</td>");
+    $el.append("<td>" + petInfo.last_name + "</td>");
     $el.append("<td>" + petInfo.breed + "</td>");
     $el.append("<td>" + petInfo.color + "</td>");
     $el.append("<td><button class='delete' data-petInfo='" +
@@ -55,8 +54,8 @@ function appendDom()
               "'>Delete</button></td>");
     $el.append("<td><button class='edit' data-petInfo='" +
                 petInfo.id +
-                "' data-owner='" + petInfo.owner +
-                "' data-name='" + petInfo.name +
+                "' data-firstName='" + petInfo.first_name +
+                "' data-lastName='" + petInfo.last_name +
                 "' data-breed='" + petInfo.breed +
                 "' data-color='" + petInfo.color +
               "'>Edit</button></td>");
