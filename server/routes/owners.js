@@ -6,4 +6,10 @@ var path = require('path');
 
 
 
-module.exports = 
+router.post('/add', function(req, res){
+  console.log('add activated', req.body);
+  res.send(req.body);
+  res.sendStatus(200);
+});
+
+module.exports = router;
