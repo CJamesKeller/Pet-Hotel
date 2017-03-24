@@ -4,21 +4,20 @@ $(document).ready(function(){
 });
 
 function addEventListeners() {
+  $('.addPet').on('submit', addPetPostRequest);
+}
 
-  $(".ownerForm").on("mouseover", function()
-{
-  console.log("you moused over!");
-});
-  //Event listeners will go here.
-
-  $('h1').on('click', function(){
-    $('h1').text('Cat Hotel');
-  });
-  $("#ownerForm").on("click","button",function(){
-    console.log("ownerForm on click button");
-  });//end ownerForm On Click button
-
-  console.log("Hahaha, conflict!");
-
+function addPetPostRequest (event) {
+  event.preventDefault();
+  var petObject = {};
+  petObject.name = $(this).children('#petFormNameInput').val();
+  petObject.breed = $(this).children('#petFormBreedInput').val();
+  petObject.color = $(this).children('#petFormColorInput').val();
+  console.log(petObject);
+  // $.ajax({
+  //   url: '/pets/add',
+  //   type: 'POST',
+  //   data: {param1: 'value1'}
+  // });
 
 }
