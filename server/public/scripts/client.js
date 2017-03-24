@@ -26,11 +26,14 @@ function addPetPostRequest (event) {
   petObject.breed = $('#petFormBreedInput').val();
   petObject.color = $('#petFormColorInput').val();
   console.log(petObject);
-  // $.ajax({
-  //   url: '/pets/add',
-  //   type: 'POST',
-  //   data: {param1: 'value1'}
-  // });
+  $.ajax({
+    url: '/pets/add',
+    type: 'POST',
+    data: petObject,
+    success: function (res) {
+      console.log(res);
+    }
+  });
 }
 
 //This will be called using a response from server!!
