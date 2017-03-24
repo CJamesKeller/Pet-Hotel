@@ -12,8 +12,6 @@ function addEventListeners() {
   console.log("you moused over!");
 });
 
-  //Event listeners will go here.
-
   $('h1').on('click', function(){
     $('h1').text('Cat Hotel');
   });
