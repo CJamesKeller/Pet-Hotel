@@ -22,9 +22,9 @@ function addEventListeners() {
 function addPetPostRequest (event) {
   event.preventDefault();
   var petObject = {};
-  petObject.name = $(this).children('#petFormNameInput').val();
-  petObject.breed = $(this).children('#petFormBreedInput').val();
-  petObject.color = $(this).children('#petFormColorInput').val();
+  //petObject.name = $('#petFormNameInput').val();
+  petObject.breed = $('#petFormBreedInput').val();
+  petObject.color = $('#petFormColorInput').val();
   console.log(petObject);
   // $.ajax({
   //   url: '/pets/add',
