@@ -5,4 +5,8 @@ $(document).ready(function(){
 
 function addEventListeners() {
   //Event listeners will go here.
+
+  $('h1').on('click', function(){
+    $('h1').text('Cat Hotel');
+  });
 }
