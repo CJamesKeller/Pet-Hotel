@@ -69,6 +69,7 @@ function addEventListeners() {
       },
       success: function(response){
         console.log(response);
+        getData();
       }
     });
   });
