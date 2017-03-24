@@ -5,4 +5,5 @@ $(document).ready(function(){
 
 function addEventListeners() {
   //Event listeners will go here.
+  console.log("Hahaha, conflict!");
 }
