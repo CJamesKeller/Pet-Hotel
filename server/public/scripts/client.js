@@ -5,4 +5,7 @@ $(document).ready(function(){
 
 function addEventListeners() {
   //Event listeners will go here.
+  $("#ownerForm").on("click","button",function(){
+    console.log("ownerForm on click button");
+  });//end ownerForm On Click button
 }
