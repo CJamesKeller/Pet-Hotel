@@ -17,7 +17,6 @@ function addEventListeners() {
 
   console.log("Hahaha, conflict!");
 
-
 }
 
 //This will be called using a response from server!!
