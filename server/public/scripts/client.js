@@ -5,6 +5,8 @@ $(document).ready(function(){
 });
 
 function addEventListeners() {
+  $('.addPet').on('submit', addPetPostRequest);
+}
 
   //Event listeners will go here.
 
@@ -17,7 +19,18 @@ function addEventListeners() {
 
   console.log("Hahaha, conflict!");
 
-
+function addPetPostRequest (event) {
+  event.preventDefault();
+  var petObject = {};
+  petObject.name = $(this).children('#petFormNameInput').val();
+  petObject.breed = $(this).children('#petFormBreedInput').val();
+  petObject.color = $(this).children('#petFormColorInput').val();
+  console.log(petObject);
+  // $.ajax({
+  //   url: '/pets/add',
+  //   type: 'POST',
+  //   data: {param1: 'value1'}
+  // });
 }
 
 //This will be called using a response from server!!
