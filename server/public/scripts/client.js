@@ -9,4 +9,11 @@ function addEventListeners() {
   $('h1').on('click', function(){
     $('h1').text('Cat Hotel');
   });
+  $("#ownerForm").on("click","button",function(){
+    console.log("ownerForm on click button");
+  });//end ownerForm On Click button
+
+  console.log("Hahaha, conflict!");
+
+
 }
