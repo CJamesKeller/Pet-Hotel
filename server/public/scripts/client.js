@@ -40,4 +40,22 @@ function addEventListeners() {
   console.log("Hahaha, conflict!");
 
 
+function addPetPostRequest (event) {
+  event.preventDefault();
+  var petObject = {};
+  //petObject.name = $('#petFormNameInput').val();
+  petObject.breed = $('#petFormBreedInput').val();
+  petObject.color = $('#petFormColorInput').val();
+  console.log(petObject);
+  $.ajax({
+    url: '/pets/add',
+    type: 'POST',
+    data: petObject,
+    success: function (res) {
+      console.log(res);
+    }
+  });
+}
+
+
 }
